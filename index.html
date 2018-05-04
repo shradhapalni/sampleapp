@@ -2,6 +2,119 @@
 <head> hey!
 </head>
 
-<body>hello there!
+<body>
+<p>
+create a new folder 
+right click
+open in git bash
+
+git --version --> will give u the version
+git init --> initializes the git repository and creates a .get folder which is hidden, if u want to see it chaneg the properties of the folder.
+
+-----------------------------------------------------------------------------------------------
+
+touch index.html   --> creates a file in the file location 
+touch app.js --> creates another file as app.js
+
+git add .    --> will add all files to staging area
+git add *.html  --> will add all html files to staging area
+git add index.html --> will add this file only to stating
+git status --> will give u list of files to be committed and rest of the files
+git rm --cached 'index.html'   --> this will remove the file from staging
+
+------------------------------------------------------------------------------------------
+
+change any file contents
+and check git status
+it will show u changed files
+
+do git add .
+
+-------------------------------------------------------------------------------------------------
+now:
+git commit
+type i key
+
+and uncomment the initial commit line.
+
+now type escape key
+
+now type ":wq"
+
+this will take u out of the commit mode.
+all files are committed at the moment
+
+-------------------------------------------------------------
+now:
+
+change any other file like app.js
+
+git add.   --> add the file
+git status --> check status
+git commit -m 'adding app.js file change'   --> add comment and commit the changes
+
+----------------------------------------------------------------------------------------------
+
+now:
+there are files you wouldnt want to check-in
+
+touch .gitignore   --> so create a file called .gitignore
+
+touch log.txt --> create another file called as log.txt
+
+open it, and add log.txt to the file .gitignore 
+
+now do a git add . --> this will not add log.txt to the staging, because it is in git ignore file .
+u can do the same thing for a folder too.
+
+now do a commit with command and log.txt will not be checked-in
+--------------------------------------------------------------------------
+
+creating a new branch
+
+git branch login  --> creates a new branch
+
+git commit -m 'new comment'   --> chkin the changes
+
+git checkout login --> opens the new branch 'login' 
+
+touch login.html  --> creates a file, go and edit it to add some html tags
+
+git add .
+
+git commit -m 'new comment'  --> chkin the new file.
+
+---------------------------------------------------------------
+
+merging the 2 branches
+
+git checkout master  --> come out of login branch and go to master branch, this will remove the file from master folder
+
+git merge login   --> this will merge the files to master and it will be visible again
+
+-----------------------------------------------------------
+
+pushing your prj 
+
+1. login to github
+2. create a new repo
+3. follow the 2 commands in the steps given there
+4. git remote add origin https://github.com/shradhapalni/sampleapp.git
+5. git push -u origin master
+6. this will ask u for login creds
+7. then add a new file 
+8. commit the changes
+9. run the command: git push
+10. try a git pull too.
+
+
+----------------------------------------------------------------------------
+
+if u want to download the same appln to a new folder
+
+do a git clone "link".
+
+done!
+</p>
 </body>
 </html>
