@@ -1,120 +1,126 @@
 <html>
-<head> hey!
+<head>
+<h1 style="font:verdana;">
+ Hey there!
+</h1>
+<h2 style="font:verdana;">Learn Git using following commands!
+</h2>
 </head>
 
 <body>
-<p>
+<p style="font:calibri; font-size:20px;">
+<br/>
 create a new folder 
-right click
-open in git bash
-
+<br/>
+right click to open in git bash
+<br/>
 git --version --> will give u the version
+<br/>
 git init --> initializes the git repository and creates a .get folder which is hidden, if u want to see it chaneg the properties of the folder.
-
------------------------------------------------------------------------------------------------
-
+<br/>
+----------------------------------------------------------------------------------------------<br/>
+<br/>
 touch index.html   --> creates a file in the file location 
+<br/>
 touch app.js --> creates another file as app.js
+<br/>
+git add .    --> will add all files to staging area <br/>
+git add *.html  --> will add all html files to staging area <br/>
+git add index.html --> will add this file only to stating <br/>
+git status --> will give u list of files to be committed and rest of the files <br/>
+git rm --cached 'index.html'   --> this will remove the file from staging <br/>
 
-git add .    --> will add all files to staging area
-git add *.html  --> will add all html files to staging area
-git add index.html --> will add this file only to stating
-git status --> will give u list of files to be committed and rest of the files
-git rm --cached 'index.html'   --> this will remove the file from staging
+----------------------------------------------------------------------------------------------<br/>
+<br/>
+change any file contents<br/>
+and check git status<br/>
+it will show u changed files<br/>
 
-------------------------------------------------------------------------------------------
+do git add .<br/>
 
-change any file contents
-and check git status
-it will show u changed files
+----------------------------------------------------------------------------------------------<br/>
+now:<br/>
+git commit<br/>
+type i key<br/>
 
-do git add .
+and uncomment the initial commit line.<br/>
 
--------------------------------------------------------------------------------------------------
-now:
-git commit
-type i key
+now type escape key<br/>
 
-and uncomment the initial commit line.
+now type ":wq"<br/>
 
-now type escape key
+this will take u out of the commit mode.<br/>
+all files are committed at the moment<br/>
 
-now type ":wq"
+----------------------------------------------------------------------------------------------<br/>
+now:<br/>
 
-this will take u out of the commit mode.
-all files are committed at the moment
+change any other file like app.js<br/>
 
--------------------------------------------------------------
-now:
+git add.   --> add the file<br/>
+git status --> check status<br/>
+git commit -m 'adding app.js file change'   --> add comment and commit the changes<br/>
 
-change any other file like app.js
+----------------------------------------------------------------------------------------------<br/>
 
-git add.   --> add the file
-git status --> check status
-git commit -m 'adding app.js file change'   --> add comment and commit the changes
+now:<br/>
+there are files you wouldnt want to check-in<br/>
 
-----------------------------------------------------------------------------------------------
+touch .gitignore   --> so create a file called .gitignore<br/>
 
-now:
-there are files you wouldnt want to check-in
+touch log.txt --> create another file called as log.txt<br/>
 
-touch .gitignore   --> so create a file called .gitignore
+open it, and add log.txt to the file .gitignore <br/>
 
-touch log.txt --> create another file called as log.txt
-
-open it, and add log.txt to the file .gitignore 
-
-now do a git add . --> this will not add log.txt to the staging, because it is in git ignore file .
+now do a git add . --> this will not add log.txt to the staging, because it is in git ignore file .<br/>
 u can do the same thing for a folder too.
+<br/>
+now do a commit with command and log.txt will not be checked-in<br/>
+----------------------------------------------------------------------------------------------<br/>
 
-now do a commit with command and log.txt will not be checked-in
---------------------------------------------------------------------------
+creating a new branch<br/>
 
-creating a new branch
+git branch login  --> creates a new branch<br/>
 
-git branch login  --> creates a new branch
+git commit -m 'new comment'   --> chkin the changes<br/>
 
-git commit -m 'new comment'   --> chkin the changes
+git checkout login --> opens the new branch 'login' <br/>
 
-git checkout login --> opens the new branch 'login' 
+touch login.html  --> creates a file, go and edit it to add some html tags<br/>
 
-touch login.html  --> creates a file, go and edit it to add some html tags
+git add .<br/>
 
-git add .
+git commit -m 'new comment'  --> chkin the new file.<br/>
 
-git commit -m 'new comment'  --> chkin the new file.
+----------------------------------------------------------------------------------------------<br/>
 
----------------------------------------------------------------
+merging the 2 branches<br/>
 
-merging the 2 branches
+git checkout master  --> come out of login branch and go to master branch, this will remove the file from master folder<br/>
 
-git checkout master  --> come out of login branch and go to master branch, this will remove the file from master folder
+git merge login   --> this will merge the files to master and it will be visible again<br/>
 
-git merge login   --> this will merge the files to master and it will be visible again
+----------------------------------------------------------------------------------------------<br/>
 
------------------------------------------------------------
+pushing your prj <br/>
 
-pushing your prj 
+1. login to github<br/>
+2. create a new repo<br/>
+3. follow the 2 commands in the steps given there<br/>
+4. git remote add origin https://github.com/shradhapalni/sampleapp.git<br/>
+5. git push -u origin master<br/>
+6. this will ask u for login creds<br/>
+7. then add a new file <br/>
+8. commit the changes<br/>
+9. run the command: git push<br/>
+10. try a git pull too.<br/>
+----------------------------------------------------------------------------------------------<br/>
 
-1. login to github
-2. create a new repo
-3. follow the 2 commands in the steps given there
-4. git remote add origin https://github.com/shradhapalni/sampleapp.git
-5. git push -u origin master
-6. this will ask u for login creds
-7. then add a new file 
-8. commit the changes
-9. run the command: git push
-10. try a git pull too.
+if u want to download the same appln to a new folder<br/>
 
+do a git clone "link".<br/>
 
-----------------------------------------------------------------------------
-
-if u want to download the same appln to a new folder
-
-do a git clone "link".
-
-done!
+done!<br/>
 </p>
 </body>
 </html>
